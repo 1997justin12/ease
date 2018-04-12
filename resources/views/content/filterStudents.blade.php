@@ -23,8 +23,17 @@
 {{-- Dropdown filter --}}
  <h4>Filter</h4>
 <div class="row" >
+<form role="form" method="post" enctype="multipart/form-data" action="http://localhost/ease_itp_final/import/excel">
+  {{ csrf_field() }}
+  <input type="file" name="importedFile">  
+  <button type="submit">Import</button>
+</form>
 
-
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
 
 
