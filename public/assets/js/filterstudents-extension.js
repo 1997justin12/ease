@@ -1,7 +1,7 @@
 
-function compareGraph(){
-	var year = $("#exampleFormControlSelect1").val();
-	var yearToCompared = $("#exampleFormControlSelect2").val();
+function compareGraph($graphData1 = $("#exampleFormControlSelect1").val(), $graphData2 = $("#exampleFormControlSelect2").val()){
+	var year = $graphData1;
+	var yearToCompared = $graphData2;
 
 	var getDataForGraph = $.ajax({
 		url: 'http://localhost/ease_itp_final/getFilterGraph/'+ year + '/'+ yearToCompared,

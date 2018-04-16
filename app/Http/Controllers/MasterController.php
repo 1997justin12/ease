@@ -291,7 +291,7 @@ public function importStudentInformation(Request $request){
 
                             if($row[$headers[$x]] != null){
                                 $grades->student_id = $students->id;
-                                $grades->schoolyear = $schoolYear['id'];
+                                $grades->schoolyear = $schoolYear->id;
                                 $grades->gwa = $row[$headers[$x]];                 
                                 
                                 $grades->save();
@@ -309,7 +309,7 @@ public function importStudentInformation(Request $request){
 
                             if($row[$headers[$x]] != null){
                                 $grades->student_id = $students->id;
-                                $grades->schoolyear = $schoolYear['id'];
+                                $grades->schoolyear = $schoolYear->id;
                                 $grades->gwa = $row[$headers[$x]];                 
                                 
                                 $grades->save();
@@ -331,6 +331,15 @@ public function importStudentInformation(Request $request){
     }
 
     return redirect('/filterStudents')->with("success", "The file imported successfully!");
+
+}
+
+public function getPrintData($x, $y = null){
+
+     return view('content.print',[
+                            'x' => $x,
+                            'y' => $y
+                        ]);
 
 }
 

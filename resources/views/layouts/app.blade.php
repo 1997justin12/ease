@@ -136,7 +136,9 @@
     <!-- Custom scripts for this page-->
        <script type="text/javascript" src="{{asset('public/assets/js/selectedNav.js')}}"></script>
     <script type="text/javascript" src="{{asset('public/assets/bootstrap/js/bootstrap-navtabs.min.js')}}" ></script>
-    @yield('script')
+ @yield('script')
 </body>
 
+
+ 
 </html>

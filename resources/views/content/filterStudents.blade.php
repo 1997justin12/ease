@@ -11,6 +11,10 @@
 
 <div class="row">
 
+<div class="button-group">
+  <a href="" target="_blank" class="btn btn-primary print"><span class="fa fa-print"></span> Print</a>
+</div>
+
  <div class="column col-lg-12" >
 
 <!-- Example Pie Chart Card-->
@@ -189,5 +193,30 @@
      <script type="text/javascript" src="{{asset('public/assets/js/filterstudents.js')}}"></script>
      <script type="text/javascript" src="{{asset('public/assets/js/filterstudents-extension.js')}}"></script>
      <script type="text/javascript" src="{{asset('public/assets/js/dropDown.js')}}"></script>
+     <!-- <script type="text/javascript">
+      $(function(){
+        $(".print").click(function(event){
+          var oldBody = document.body.innerHTML;
+          var newBody = "<html><head><title></title></head><body>" + 
+               "test" + "</body>";
+          document.body.innerHTML = newBody;
+          window.print();
+          document.body.innerHTML = oldBody;
+        });
+      });
+
+     </script> -->
+     <script type="text/javascript">
+       $('.print').click(function(event){
+        var select = $("#exampleFormControlSelect1").val();
+        var select1 = $("#exampleFormControlSelect2").val();
+
+
+        $(this).attr('href', 'http://localhost/ease_itp_final/getPrintData/'+select+'/'+select1);
+
+       });
+
+
+     </script>
 
 @endsection
