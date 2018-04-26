@@ -12,7 +12,7 @@
 <div class="row">
 
 <div class="button-group">
-  <a href="" target="_blank" class="btn btn-primary print"><span class="fa fa-print"></span> Print</a>
+  <a href="#" class="btn btn-primary print"><span class="fa fa-print"></span> Print</a>
 </div>
 
  <div class="column col-lg-12" >
@@ -212,7 +212,7 @@
         var select1 = $("#exampleFormControlSelect2").val();
 
 
-        $(this).attr('href', 'http://localhost/ease_itp_final/getPrintData/'+select+'/'+select1);
+        $(this).attr('href', 'http://localhost/ease_itp_final/get/pdf/'+select+'/'+select1);
 
        });
 

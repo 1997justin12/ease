@@ -40,3 +40,5 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/import/excel', 'MasterController@importStudentInformation');
 
 Route::get('/getPrintData/{x}/{y?}', 'MasterController@getPrintData');
+
+Route::get('/get/pdf/{x}/{y?}', 'MasterController@informationPDF');
